@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#5B97C5"
+    android:orientation="vertical"
+    tools:context=".KalkulasiBalok">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            layout="@layout/appbar_balok"
+            />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:ignore="ScrollViewSize">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/silahkan_masukan_angka_yang_sesuai_dengan_variabelnya"
+                android:textSize="@dimen/_10ssp"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/white"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="@dimen/_20sdp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/panjang"
+                android:textSize="@dimen/_14ssp"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/white"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="@dimen/_30sdp"/>
+
+            <EditText
+                android:id="@+id/panjang_blk"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_34sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:background="@drawable/editext_bg"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal|numberSigned|number"
+                android:paddingStart="@dimen/_10sdp"
+                tools:ignore="LabelFor,RtlSymmetry,SpeakableTextPresentCheck" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lebar"
+                android:textSize="@dimen/_14ssp"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/white"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="@dimen/_30sdp"/>
+
+            <EditText
+                android:id="@+id/lebar_blk"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_34sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:background="@drawable/editext_bg"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal|numberSigned|number"
+                android:paddingStart="@dimen/_10sdp"
+                tools:ignore="LabelFor,RtlSymmetry,SpeakableTextPresentCheck" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tinggi_balok"
+                android:textSize="@dimen/_14ssp"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/white"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="@dimen/_30sdp"/>
+
+            <EditText
+                android:id="@+id/tinggi_blk"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_34sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:background="@drawable/editext_bg"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal|numberSigned|number"
+                android:paddingStart="@dimen/_10sdp"
+                tools:ignore="LabelFor,SpeakableTextPresentCheck" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:gravity="center">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/hitung_blk"
+                    android:layout_width="@dimen/_98sdp"
+                    android:layout_height="@dimen/_38sdp"
+                    android:background="@drawable/hitung_bg"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:text="@string/hitung"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13ssp"
+                    android:stateListAnimator="@null"
+                    />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/clear_text_blk"
+                    android:layout_width="@dimen/_98sdp"
+                    android:layout_height="@dimen/_38sdp"
+                    android:background="@drawable/clear_bg"
+                    android:text="@string/hapus"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13ssp"
+                    android:stateListAnimator="@null"
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_20sdp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/luas_balok"
+                    android:textSize="@dimen/_14ssp"
+                    android:fontFamily="@font/poppins_light"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:id="@+id/hasil_ls_balok"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:textSize="@dimen/_14ssp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textColor="#FAF500"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_20sdp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/keliling_balok"
+                    android:textSize="@dimen/_14ssp"
+                    android:fontFamily="@font/poppins_light"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:id="@+id/hasil_kl_balok"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:textSize="@dimen/_14ssp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textColor="#FAF500"/>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
